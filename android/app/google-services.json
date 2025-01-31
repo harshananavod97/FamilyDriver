@@ -1,18 +1,27 @@
 {
   "project_info": {
     "project_number": "486159786077",
+    "firebase_url": "https://family-driver-40a64-default-rtdb.firebaseio.com",
     "project_id": "family-driver-40a64",
     "storage_bucket": "family-driver-40a64.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:486159786077:android:383a7fb9f1a66f95f7edb4",
+        "mobilesdk_app_id": "1:486159786077:android:deef92e584e41de0f7edb4",
         "android_client_info": {
-          "package_name": "com.familydriver.driver.driver"
+          "package_name": "com.family.driver.rider"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "486159786077-i08t6lt2mu67h5lh2k1vpb0vr20g1tkc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.family.driver.rider",
+            "certificate_hash": "70ff31d52236dc08274ed8031d20b1da835c8850"
+          }
+        },
         {
           "client_id": "486159786077-qbeek1dionna5geisu0dal5u2cd71hqe.apps.googleusercontent.com",
           "client_type": 3
@@ -36,26 +45,18 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:486159786077:android:119b3323cfa94197f7edb4",
+        "mobilesdk_app_id": "1:486159786077:android:383a7fb9f1a66f95f7edb4",
         "android_client_info": {
-          "package_name": "com.familydriver.driver.rider"
+          "package_name": "com.familydriver.driver.driver"
         }
       },
       "oauth_client": [
         {
-          "client_id": "486159786077-2901stfnv1m8nuee9fme9h2hfg5r30sl.apps.googleusercontent.com",
+          "client_id": "486159786077-je3dmpbu3vgj65e27cghcmfhpl6n2chg.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.familydriver.driver.rider",
-            "certificate_hash": "74dc691c20652ffa2989480e335c1d89f0b73ac2"
-          }
-        },
-        {
-          "client_id": "486159786077-rojqrbq1lb4vvv1nvtgnig08fgb6lvjl.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.familydriver.driver.rider",
-            "certificate_hash": "6c5304934ecca59f6ac06b8fb49cb556ab2df6ec"
+            "package_name": "com.familydriver.driver.driver",
+            "certificate_hash": "a81bd2ac6415c0a333a3b041dc7d8ca46203ded6"
           }
         },
         {

@@ -6,15 +6,15 @@ const mAppName = 'Driver Doc';
 
 //region DomainUrl
 /*DEV-URL*/
-// 
-// 
+//
+//
 /*LIVE-URL*/
 const DOMAIN_URL =
-    'https://familydriver.lk';// Don't add slash at the end of the url
+    'https://familydriver.lk'; // Don't add slash at the end of the url
 //endregion
 
 //region Google map key
-//  
+//
 const GOOGLE_MAP_API_KEY = 'AIzaSyDUBAIjQdKM4JwMmBj_v0ew1uNQCgnsvE4';
 //endregion
 
@@ -53,12 +53,15 @@ const mOneSignalRestKeyRider =
 // const measurementId = "YOUR_FIREBASE_CONFIG_VALUE";
 
 const apiKeyFirebase = 'AIzaSyCeQkx7cNH0n0BnrixKEmX0Fv2DfhRr1GI';
-const appIdAndroid = '1:486159786077:android:383a7fb9f1a66f95f7edb4'; // For the first Android client
+const appIdAndroid =
+    '1:486159786077:android:383a7fb9f1a66f95f7edb4'; // For the first Android client
 const projectId = 'family-driver-40a64';
 const storageBucket = 'family-driver-40a64.firebasestorage.app';
 const messagingSenderId = '486159786077';
 const authDomain = "family-driver-40a64.firebaseapp.com";
-const measurementId = "";
+const measurementId = "G-ENHBLBX09P";
+
+//G-BZZTH7LFZ2
 // FIREBASE VALUES FOR IOS APP
 const appIdIOS = 'YOUR_FIREBASE_CONFIG_VALUE';
 const IOS_BUNDLE_ID = 'YOUR_FIREBASE_CONFIG_VALUE';
@@ -216,8 +219,10 @@ const LEFT = 'left';
 const CLOCK = 'clock';
 const PRESENT_TOPUP_AMOUNT = 'preset_topup_amount';
 const PRESENT_TIP_AMOUNT = 'preset_tip_amount';
-const MAX_TIME_FOR_RIDER_MINUTE = 'max_time_for_find_drivers_for_regular_ride_in_minute';
-const MAX_TIME_FOR_DRIVER_SECOND = 'ride_accept_decline_duration_for_driver_in_second';
+const MAX_TIME_FOR_RIDER_MINUTE =
+    'max_time_for_find_drivers_for_regular_ride_in_minute';
+const MAX_TIME_FOR_DRIVER_SECOND =
+    'ride_accept_decline_duration_for_driver_in_second';
 const MIN_AMOUNT_TO_ADD = 'min_amount_to_add';
 const MAX_AMOUNT_TO_ADD = 'max_amount_to_add';
 const APPLY_ADDITIONAL_FEE = 'apply_additional_fee';
