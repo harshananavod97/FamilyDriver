@@ -24,7 +24,11 @@ class OTPDialog extends StatefulWidget {
   final bool? isCodeSent;
   final PhoneAuthCredential? credential;
 
-  OTPDialog({this.verificationId, this.isCodeSent, this.phoneNumber, this.credential});
+  OTPDialog(
+      {this.verificationId,
+      this.isCodeSent,
+      this.phoneNumber,
+      this.credential});
 
   @override
   OTPDialogState createState() => OTPDialogState();
@@ -51,9 +55,12 @@ class OTPDialogState extends State<OTPDialog> {
   Future<void> submit() async {
     appStore.setLoading(true);
 
-    AuthCredential credential = PhoneAuthProvider.credential(verificationId: widget.verificationId!, smsCode: verId.validate());
+    AuthCredential credential = PhoneAuthProvider.credential(
+        verificationId: widget.verificationId!, smsCode: verId.validate());
 
-    await FirebaseAuth.instance.signInWithCredential(credential).then((result) async {
+    await FirebaseAuth.instance
+        .signInWithCredential(credential)
+        .then((result) async {
       Map req = {
         "email": '',
         "login_type": "mobile",
@@ -68,7 +75,12 @@ class OTPDialogState extends State<OTPDialog> {
         appStore.setLoading(false);
         if (value.data == null) {
           Navigator.pop(context);
-          launchScreen(context, SignUpScreen(countryCode: widget.phoneNumber!.split(" ").first, userName: widget.phoneNumber!.split(" ").last, socialLogin: true));
+          launchScreen(
+              context,
+              SignUpScreen(
+                  countryCode: widget.phoneNumber!.split(" ").first,
+                  userName: widget.phoneNumber!.split(" ").last,
+                  socialLogin: true));
         } else {
           updatePlayerId();
           if (sharedPref.getInt(IS_Verified_Driver) == 1) {
@@ -76,7 +88,8 @@ class OTPDialogState extends State<OTPDialog> {
             launchScreen(context, DashboardScreen(), isNewTask: true);
           } else {
             Navigator.pop(context);
-            launchScreen(context, DocumentsScreen(isShow: true), pageRouteAnimation: PageRouteAnimation.Slide, isNewTask: true);
+            launchScreen(context, DocumentsScreen(isShow: true),
+                pageRouteAnimation: PageRouteAnimation.Slide, isNewTask: true);
           }
         }
       }).catchError((e) {
@@ -123,7 +136,8 @@ class OTPDialogState extends State<OTPDialog> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(language.signInUsingYourMobileNumber, style: boldTextStyle(size: 18)),
+              Text(language.signInUsingYourMobileNumber,
+                  style: boldTextStyle(size: 18)),
               IconButton(
                 onPressed: () {
                   Navigator.pop(context);
@@ -145,9 +159,9 @@ class OTPDialogState extends State<OTPDialog> {
                   children: [
                     CountryCodePicker(
                       padding: EdgeInsets.zero,
-                      initialSelection: otpCode,
+                      initialSelection: 'LK', // ISO code for Sri Lanka
                       showCountryOnly: false,
-                      dialogSize: Size(MediaQuery.of(context).size.width - 60, MediaQuery.of(context).size.height * 0.6),
+                      countryFilter: ['LK'], // Only show Sri Lanka
                       showFlag: true,
                       showFlagDialog: true,
                       showOnlyCountryWhenClosed: false,
@@ -159,12 +173,16 @@ class OTPDialogState extends State<OTPDialog> {
                       searchDecoration: InputDecoration(
                         focusColor: primaryColor,
                         iconColor: Theme.of(context).dividerColor,
-                        enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: Theme.of(context).dividerColor)),
-                        focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: primaryColor)),
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                                color: Theme.of(context).dividerColor)),
+                        focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: primaryColor)),
                       ),
                       searchStyle: primaryTextStyle(),
                       onInit: (c) {
-                        otpCode = c!.dialCode!;
+                        otpCode = c!
+                            .dialCode!; // Sri Lanka dial code (+94) will be set
                       },
                       onChanged: (c) {
                         otpCode = c.dialCode!;
@@ -228,11 +246,15 @@ class OTPDialogState extends State<OTPDialog> {
               SizedBox(height: 16),
               Column(
                 children: [
-                  Text(language.otpCodeHasBeenSentTo, style: secondaryTextStyle(size: 16), textAlign: TextAlign.center),
+                  Text(language.otpCodeHasBeenSentTo,
+                      style: secondaryTextStyle(size: 16),
+                      textAlign: TextAlign.center),
                   SizedBox(height: 4),
                   Text(widget.phoneNumber.validate(), style: boldTextStyle()),
                   SizedBox(height: 10),
-                  Text(language.pleaseEnterOtp, style: secondaryTextStyle(size: 16), textAlign: TextAlign.center),
+                  Text(language.pleaseEnterOtp,
+                      style: secondaryTextStyle(size: 16),
+                      textAlign: TextAlign.center),
                 ],
               ),
               SizedBox(height: 16),
@@ -249,7 +271,8 @@ class OTPDialogState extends State<OTPDialog> {
                     onLongPress: () {},
                     cursor: Text(
                       "|",
-                      style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+                      style:
+                          TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
                     ),
                     focusedPinTheme: PinTheme(
                       width: 40,
@@ -257,7 +280,10 @@ class OTPDialogState extends State<OTPDialog> {
                       textStyle: TextStyle(
                         fontSize: 18,
                       ),
-                      decoration: BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.all(Radius.circular(8)), border: Border.all(color: primaryColor)),
+                      decoration: BoxDecoration(
+                          color: Colors.transparent,
+                          borderRadius: BorderRadius.all(Radius.circular(8)),
+                          border: Border.all(color: primaryColor)),
                     ),
                     toolbarEnabled: true,
                     useNativeKeyboard: true,
@@ -267,7 +293,10 @@ class OTPDialogState extends State<OTPDialog> {
                       textStyle: TextStyle(
                         fontSize: 18,
                       ),
-                      decoration: BoxDecoration(color: Colors.transparent, borderRadius: BorderRadius.all(Radius.circular(8)), border: Border.all(color: dividerColor)),
+                      decoration: BoxDecoration(
+                          color: Colors.transparent,
+                          borderRadius: BorderRadius.all(Radius.circular(8)),
+                          border: Border.all(color: dividerColor)),
                     ),
                     isCursorAnimationEnabled: true,
                     showCursor: true,

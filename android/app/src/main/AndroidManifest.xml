@@ -17,7 +17,8 @@
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:extractNativeLibs="true"
-        tools:replace="android:label">
+        android:allowBackup="false"
+    tools:replace="android:label,android:allowBackup">
        <meta-data
            android:name="com.google.android.geo.API_KEY"
            android:value="AIzaSyDUBAIjQdKM4JwMmBj_v0ew1uNQCgnsvE4" />

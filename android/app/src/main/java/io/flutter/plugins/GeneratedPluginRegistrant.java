@@ -171,6 +171,11 @@ public final class GeneratedPluginRegistrant {
       Log.e(TAG, "Error registering plugin path_provider_android, io.flutter.plugins.pathprovider.PathProviderPlugin", e);
     }
     try {
+      flutterEngine.getPlugins().add(new lk.payhere.PayhereMobilesdkFlutterPlugin());
+    } catch (Exception e) {
+      Log.e(TAG, "Error registering plugin payhere_mobilesdk_flutter, lk.payhere.PayhereMobilesdkFlutterPlugin", e);
+    }
+    try {
       flutterEngine.getPlugins().add(new in.appyflow.paytm.PaytmPlugin());
     } catch (Exception e) {
       Log.e(TAG, "Error registering plugin paytm, in.appyflow.paytm.PaytmPlugin", e);

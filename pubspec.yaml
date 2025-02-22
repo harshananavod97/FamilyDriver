@@ -91,6 +91,7 @@ dependencies:
   flutter_ringtone_player: ^4.0.0+3
   permission_handler:
   flutter_paypal_payment:
+  payhere_mobilesdk_flutter: ^3.0.10
 
   flutter_localizations:
     sdk: flutter

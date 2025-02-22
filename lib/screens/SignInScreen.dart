@@ -460,46 +460,46 @@ class SignInScreenState extends State<SignInScreen> {
           ),
         ),
         SizedBox(height: 16),
-        // Row(
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        //   children: [
-        //     inkWellWidget(
-        //         onTap: () async {
-        //           googleSignIn();
-        //         },
-        //         child: socialWidgetComponent(img: ic_google)),
-        //     SizedBox(width: 12),
-        //     inkWellWidget(
-        //       onTap: () async {
-        //         showDialog(
-        //           context: context,
-        //           builder: (_) {
-        //             return AlertDialog(
-        //               contentPadding: EdgeInsets.all(16),
-        //               content: OTPDialog(),
-        //             );
-        //           },
-        //         );
-        //         appStore.setLoading(false);
-        //       },
-        //       child: Container(
-        //         padding: EdgeInsets.all(6),
-        //         decoration: BoxDecoration(border: Border.all(color: dividerColor), borderRadius: radius(defaultRadius)),
-        //         child: Image.asset(ic_mobile, fit: BoxFit.cover, height: 30, width: 30),
-        //       ),
-        //     ),
-        //     if (Platform.isIOS) SizedBox(width: 12),
-        //     if (Platform.isIOS)
-        //       inkWellWidget(
-        //         onTap: () async {
-        //           appleLoginApi();
-        //         },
-        //         child: Padding(
-        //             padding: EdgeInsets.only(bottom: 4.0),
-        //             child: socialWidgetComponent(img: ic_apple)),
-        //       ),
-        //   ],
-        // ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            inkWellWidget(
+                onTap: () async {
+                  googleSignIn();
+                },
+                child: socialWidgetComponent(img: ic_google)),
+            SizedBox(width: 12),
+            inkWellWidget(
+              onTap: () async {
+                showDialog(
+                  context: context,
+                  builder: (_) {
+                    return AlertDialog(
+                      contentPadding: EdgeInsets.all(16),
+                      content: OTPDialog(),
+                    );
+                  },
+                );
+                appStore.setLoading(false);
+              },
+              child: Container(
+                padding: EdgeInsets.all(6),
+                decoration: BoxDecoration(border: Border.all(color: dividerColor), borderRadius: radius(defaultRadius)),
+                child: Image.asset(ic_mobile, fit: BoxFit.cover, height: 30, width: 30),
+              ),
+            ),
+            if (Platform.isIOS) SizedBox(width: 12),
+            if (Platform.isIOS)
+              inkWellWidget(
+                onTap: () async {
+                  appleLoginApi();
+                },
+                child: Padding(
+                    padding: EdgeInsets.only(bottom: 4.0),
+                    child: socialWidgetComponent(img: ic_apple)),
+              ),
+          ],
+        ),
         Row(
           mainAxisSize: MainAxisSize.min,
           children: [

@@ -3,6 +3,8 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+      
+       
     }
 
     dependencies {
@@ -17,7 +19,12 @@ allprojects {
         google()
         mavenCentral()
         maven {
-            url 'https://oss.sonatype.org/content/repositories/snapshots/'
+          
+             url  "https://repo.repsy.io/mvn/payhere/payhere-mobilesdk-android/"
+        }
+         maven {
+            
+              url  "https://repo.repsy.io/mvn/payhere/payhere-mobilesdk-android/"
         }
     }
 }
